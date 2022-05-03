@@ -15,10 +15,10 @@ import fetch, {
 
 
 /*JSProxy快速示例*/
-// import jsproxy from './demo/jsproxy.js'
-// const handle = async (req)=>{
-//   return jsproxy(req)
-// }
+import jsproxy from './demo/jsproxy.js'
+const handle = async (req)=>{
+  return jsproxy(req)
+}
 
 
 /*FormData获取
@@ -85,10 +85,10 @@ const handle = async (req)=>{
 
 
 // Twikoo
-import twikoo from './demo/twikoo.js'
-const handle = async (req) => {
-  return twikoo(req)
-}
+// import twikoo from './demo/twikoo.js'
+// const handle = async (req) => {
+//   return twikoo(req)
+// }
 
 export default handle
 
