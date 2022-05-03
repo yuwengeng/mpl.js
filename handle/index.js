@@ -15,10 +15,10 @@ import fetch, {
 
 
 /*JSProxy快速示例*/
-import jsproxy from './demo/jsproxy.js'
-const handle = async (req)=>{
-  return jsproxy(req)
-}
+// import jsproxy from './demo/jsproxy.js'
+// const handle = async (req)=>{
+//   return jsproxy(req)
+// }
 
 
 /*FormData获取
@@ -29,14 +29,14 @@ const handle = async (req)=>{
 }
 */
 
-/*简易反代
+/*简易反代*/
 const handle = async (req) => {
   const rawURL = new URL(req.url)
   console.log(rawURL.pathname)
 
   return fetch('https://www.google.com' + rawURL.pathname)
 }
-*/
+
 
 //mpl.js能传递什么?
 // const handle = async (req) => {
