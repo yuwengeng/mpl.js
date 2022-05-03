@@ -7,7 +7,8 @@
     "dev:vercel": "npx vercel dev --debug -l 9000",
     "run:vercel": "npx vercel dev -l 9000",
     "run:node": "node ./api/node.js",
-    "run:heroku":"node ./api/heroku.js"
+    "run:heroku":"node ./api/heroku.js",
+    "run:cfworker":"node ./api/cfworker.js"
   },
   "author": "ChenYFan",
   "type": "module",
