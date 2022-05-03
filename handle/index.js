@@ -30,12 +30,12 @@ const handle = async (req)=>{
 */
 
 /*简易反代*/
-const handle = async (req) => {
-  const rawURL = new URL(req.url)
-  console.log(rawURL.pathname)
+// const handle = async (req) => {
+//   const rawURL = new URL(req.url)
+//   console.log(rawURL.pathname)
 
-  return fetch('https://www.google.com' + rawURL.pathname)
-}
+//   return fetch('https://www.google.com' + rawURL.pathname)
+// }
 
 
 //mpl.js能传递什么?
@@ -84,11 +84,11 @@ const handle = async (req) => {
 
 
 
-/*Twikoo
+// Twikoo
 import twikoo from './demo/twikoo.js'
 const handle = async (req) => {
   return twikoo(req)
-}*/
+}
 
 export default handle
 
