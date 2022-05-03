@@ -14,12 +14,12 @@ import fetch, {
 
 
 
-/*JSProxy快速示例
+/*JSProxy快速示例*/
 import jsproxy from './demo/jsproxy.js'
 const handle = async (req)=>{
   return jsproxy(req)
 }
-*/
+
 
 /*FormData获取
 const handle = async (req)=>{
@@ -39,47 +39,47 @@ const handle = async (req) => {
 */
 
 //mpl.js能传递什么?
-const handle = async (req) => {
-  const rawURL = new URL(req.url)
-  return new Response(`
-  <h1>MPL.js 服务端Demo</h1>
-  <p>访问路径:${rawURL.pathname}</p>
-  <p>访问参数:${rawURL.search}</p>
-  <p>访问参数数组:${(() => {
-      const arr = {}
-      for (const [key, value] of rawURL.searchParams.entries()) {
-        arr[key] = value
-      }
-      return JSON.stringify(arr)
-    })()}</p>
-  <p>访问方法:${req.method}</p>
-  <p>访问头:${(() => {
-      const arr = {}
-      for (const [key, value] of req.headers.entries()) {
-        arr[key] = value
-      }
-      return JSON.stringify(arr)
-    })()}</p>
-  <p>Cookie:${req.headers.get('cookie')}</p>
-  <p>Cookie数组:${(() => {
-      const arr = {}
-      const cookie = req.headers.get('cookie')
-      if (cookie) {
-        for (const [key, value] of cookie.split(';').map(v => v.split('='))) {
-          arr[key] = value
-        }
-      }
-      return JSON.stringify(arr)
+// const handle = async (req) => {
+//   const rawURL = new URL(req.url)
+//   return new Response(`
+//   <h1>MPL.js 服务端Demo</h1>
+//   <p>访问路径:${rawURL.pathname}</p>
+//   <p>访问参数:${rawURL.search}</p>
+//   <p>访问参数数组:${(() => {
+//       const arr = {}
+//       for (const [key, value] of rawURL.searchParams.entries()) {
+//         arr[key] = value
+//       }
+//       return JSON.stringify(arr)
+//     })()}</p>
+//   <p>访问方法:${req.method}</p>
+//   <p>访问头:${(() => {
+//       const arr = {}
+//       for (const [key, value] of req.headers.entries()) {
+//         arr[key] = value
+//       }
+//       return JSON.stringify(arr)
+//     })()}</p>
+//   <p>Cookie:${req.headers.get('cookie')}</p>
+//   <p>Cookie数组:${(() => {
+//       const arr = {}
+//       const cookie = req.headers.get('cookie')
+//       if (cookie) {
+//         for (const [key, value] of cookie.split(';').map(v => v.split('='))) {
+//           arr[key] = value
+//         }
+//       }
+//       return JSON.stringify(arr)
 
-    })()}</p>
-  <p>访问Body内容:${await req.text()}</p>
+//     })()}</p>
+//   <p>访问Body内容:${await req.text()}</p>
 
-  `, {
-    headers: {
-      'Content-Type': 'text/html; charset=utf-8'
-    }
-  })
-}
+//   `, {
+//     headers: {
+//       'Content-Type': 'text/html; charset=utf-8'
+//     }
+//   })
+// }
 
 
 
