@@ -2,7 +2,7 @@
   "name": "mpl.js",
   "version": "0.0.1-beta-4",
   "description": "JavaScript Multi Plaform Launcher",
-  "main": "./handle/index.js",
+  "main": "./api/vercel.js",
   "scripts": {
     "dev:vercel": "npx vercel dev --debug -l 9000",
     "run:vercel": "npx vercel dev -l 9000",
